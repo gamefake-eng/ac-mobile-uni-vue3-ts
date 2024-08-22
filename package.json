@@ -42,7 +42,7 @@
 		"build:quickapp-webview-union": "uni build -p quickapp-webview-union",
 		"type-check": "vue-tsc --noEmit",
 		"prepare": "husky install",
-		"lint": "eslint src",
+		"lint": "eslint ./",
 		"lint-staged": "lint-staged",
 		"commitlint": "commitlint --config commitlint.config.js -e -V",
 		"commit": "git pull && git add -A && git-cz && git push"

@@ -16,4 +16,4 @@
 - lint-staged 15.2.9
 - commitlint 19.4.0
 - commitizen 4.3.0
-- cz-git 1.9.4
+- cz-git 1.9.4.
