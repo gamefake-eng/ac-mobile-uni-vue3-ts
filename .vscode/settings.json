@@ -1,0 +1,53 @@
+{
+  "unocss.root": "D:\\code\\item\\uni-preset-vue-vite-ts\\",
+  // CSScomb 相关（需安装 CSScomb 插件）
+  // 保存文件时自动格式化
+  "csscomb.formatOnSave": true,
+  // 预设（即 CSScomb 的配置文件）
+  "csscomb.preset": ".csscomb.json",
+  // 保存时忽略文件，作用同 CSSComb 配置文件内的 exclude
+  "csscomb.ignoreFilesOnSave": ["node_modules/**"],
+  "csscomb.syntaxAssociations": {
+    // 以下似乎对小程序 WXSS 等样式文件无效（有空再仔细琢磨一下），但只要将 files.associations 配置关联为 css 文件，同样可以实现保存时自动格式化。
+    "*.wxss": "css",
+    "*.acss": "css"
+  },
+  // 编辑器相关
+  "editor.trimAutoWhitespace": false, // 删除自动插入的尾随空白符号
+  "editor.formatOnSave": true, // 在保存时格式化文件
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  // 定义默认格式化程序，这里指定了 Prettier（需安装插件）。
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[less]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}

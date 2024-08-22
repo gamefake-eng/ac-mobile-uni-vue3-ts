@@ -1,0 +1,27 @@
+# .prettierignore 文件配置
+/node_modules
+/dist
+/src/fonts/
+*.dll.js
+*.dll.manifest.json
+uni_modules
+wxcomponents
+
+# OS
+.DS_Store
+.idea
+.editorconfig
+package-lock.json
+.npmrc
+
+# Ignored suffix
+*.log
+*.md
+*.svg
+*.png
+*ignore
+
+
+# Built-files
+.cache
+dist
