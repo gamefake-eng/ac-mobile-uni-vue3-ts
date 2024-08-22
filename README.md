@@ -1,6 +1,6 @@
 # ac-mobile-uni-vue3-ts
 
-1. 依赖
+## 依赖
 
 - Node.js >= 16
 - Vue 3.4.21
@@ -16,4 +16,12 @@
 - lint-staged 15.2.9
 - commitlint 19.4.0
 - commitizen 4.3.0
-- cz-git 1.9.4.
+- cz-git 1.9.4
+- pinia
+- axios-miniprogram
+- unocss
+- @vueuse/core
+- inquirer 8.0.0
+- shelljs 0.8.5
+
+## 目录结构

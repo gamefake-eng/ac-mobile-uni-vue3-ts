@@ -1,6 +1,15 @@
 {
 	"extends": "@vue/tsconfig/tsconfig.json",
 	"compilerOptions": {
+		"noImplicitThis": false, // 允许this隐式any类型
+		"target": "esnext",
+		"useDefineForClassFields": true,
+		"module": "esnext",
+		"moduleResolution": "node",
+		"strict": true,
+		"jsx": "preserve",
+		"resolveJsonModule": true,
+		"esModuleInterop": true,
 		"ignoreDeprecations": "5.0",
 		"sourceMap": true,
 		"baseUrl": ".",

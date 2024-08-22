@@ -11,7 +11,6 @@ module.exports = {
 	/* 优先级低于 parse 的语法解析配置 */
 	parserOptions: {
 		ecmaVersion: 2020,
-		sourceType: "module",
 		jsxPragma: "React",
 		ecmaFeatures: {
 			jsx: true

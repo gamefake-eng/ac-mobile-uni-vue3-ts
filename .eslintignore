@@ -17,3 +17,6 @@ html
 /src/mock/*
 uni_modules
 wxcomponents
+script
+commitlint.config.js
+lint-staged.config.js
