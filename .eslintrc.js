@@ -7,7 +7,7 @@ module.exports = {
 	},
 
 	/* 指定如何解析语法 */
-	parser: "vue-eslint-parser",
+	parser: "babel-eslint", // 解决 Parsing error: Unexpected token 错误
 	/* 优先级低于 parse 的语法解析配置 */
 	parserOptions: {
 		ecmaVersion: 2020,
