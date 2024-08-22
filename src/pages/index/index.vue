@@ -9,7 +9,15 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
+import { loginApi } from "@/api";
 const title = ref("Hello");
+
+setTimeout(() => {
+	loginApi.login({
+		mobile: "213",
+		password: "123"
+	});
+}, 2000);
 </script>
 
 <style>

@@ -5,7 +5,7 @@
  */
 
 import { TOKEN_STORAGE_KEY, TOKEN_KEY, TOKEN_BASE } from "@/config/config";
-import axios, { Axios, AxiosResponseError } from "axios-miniprogram";
+import axios, { Axios } from "axios-miniprogram";
 
 const http: Axios = axios;
 
@@ -13,9 +13,6 @@ http.defaults.timeout = 20000;
 
 // 接口重发记录
 const configRetry: any = {};
-
-// 刷新token后需要重发的列表
-const refreshTokenList: any[] = [];
 
 // 请求base路径
 http.defaults.baseURL = import.meta.env.VITE_BASE_URL;
@@ -112,7 +109,7 @@ http.interceptors.response.use(
 		configRetry[config.url] += 1;
 
 		// Create new promise to handle exponential backoff
-		var backoff = new Promise(function (resolve) {
+		let backoff = new Promise(function (resolve) {
 			setTimeout(function () {
 				resolve(undefined);
 			}, config.retryDelay || 1);

@@ -19,4 +19,4 @@ uni_modules
 wxcomponents
 script
 commitlint.config.js
-lint-staged.config.js
+*.d.ts

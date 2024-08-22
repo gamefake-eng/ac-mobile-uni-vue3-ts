@@ -7,9 +7,12 @@ module.exports = {
 	},
 
 	/* 指定如何解析语法 */
-	parser: "babel-eslint", // 解决 Parsing error: Unexpected token 错误
+	parser: "vue-eslint-parser",
 	/* 优先级低于 parse 的语法解析配置 */
 	parserOptions: {
+		// parser: "@babel/eslint-parser", // 解决 Parsing error: Unexpected token 错误
+		parser: "@typescript-eslint/parser", // 解决 Parsing error: Unexpected token 错误
+		requireConfigFile: false,
 		ecmaVersion: 2020,
 		jsxPragma: "React",
 		ecmaFeatures: {
@@ -17,10 +20,11 @@ module.exports = {
 		}
 	},
 
+	plugins: ["@typescript-eslint"],
+
 	extends: [
 		"plugin:vue/vue3-essential",
-		"eslint:recommended",
-		"plugin:vue/recommended",
+		"plugin:@typescript-eslint/recommended", // TypeScript 推荐规则集
 		"prettier",
 		"plugin:prettier/recommended"
 	],
@@ -45,6 +49,8 @@ module.exports = {
 		"no-use-before-define": "off", // 禁止在 函数/类/变量 定义之前使用它们
 		"prefer-const": "off", // 此规则旨在标记使用 let 关键字声明但在初始分配后从未重新分配的变量，要求使用 const
 		"no-irregular-whitespace": "off", // 禁止不规则的空白
+
+		"@typescript-eslint/no-namespace": "off",
 
 		// vue (https://eslint.vuejs.org/rules)
 		"vue/script-setup-uses-vars": "error", // 防止<script setup>使用的变量<template>被标记为未使用，此规则仅在启用该no-unused-vars规则时有效。
