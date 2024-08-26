@@ -20,3 +20,4 @@ wxcomponents
 script
 commitlint.config.js
 *.d.ts
+/src/uni_modules

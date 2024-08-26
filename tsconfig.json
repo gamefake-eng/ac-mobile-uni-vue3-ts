@@ -1,5 +1,4 @@
 {
-	"extends": "@vue/tsconfig/tsconfig.json",
 	"compilerOptions": {
 		"noImplicitThis": false, // 允许this隐式any类型
 		"target": "esnext",
@@ -17,7 +16,7 @@
 			"@/*": ["./src/*"]
 		},
 		"lib": ["esnext", "dom"],
-		"types": ["@dcloudio/types"]
+		"types": ["@dcloudio/types", "uview-plus/types"]
 	},
 	"include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
 }

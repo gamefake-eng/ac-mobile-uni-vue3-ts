@@ -2,22 +2,15 @@
 	<view class="content">
 		<image class="logo" src="/static/logo.png" />
 		<view class="text-area">
-			<text class="title">{{ title }}</text>
+			<text class="title" :text="title ? 'xl' : ''">{{ title }}</text>
+			<u-button type="primary" size="large" text="test" />
 		</view>
 	</view>
 </template>
 
 <script setup lang="ts">
 import { ref } from "vue";
-import { loginApi } from "@/api";
 const title = ref("Hello");
-
-setTimeout(() => {
-	loginApi.login({
-		mobile: "213",
-		password: "123"
-	});
-}, 2000);
 </script>
 
 <style>
@@ -40,10 +33,5 @@ setTimeout(() => {
 .text-area {
 	display: flex;
 	justify-content: center;
-}
-
-.title {
-	font-size: 36rpx;
-	color: #8f8f94;
 }
 </style>
