@@ -1,6 +1,6 @@
 <template>
 	<view class="content">
-		<image class="logo" src="/static/logo.png" />
+		<image class="logo" src="/assets/logo.png" />
 		<view class="text-area">
 			<text class="title" :text="title ? 'xl' : ''">{{ title }}</text>
 			<u-button type="primary" size="large" text="test" />
