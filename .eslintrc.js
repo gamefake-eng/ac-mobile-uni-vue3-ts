@@ -51,6 +51,7 @@ module.exports = {
 		"no-irregular-whitespace": "off", // 禁止不规则的空白
 
 		"@typescript-eslint/no-namespace": "off",
+		"@typescript-eslint/no-explicit-any": ["off"],
 
 		// vue (https://eslint.vuejs.org/rules)
 		"vue/script-setup-uses-vars": "error", // 防止<script setup>使用的变量<template>被标记为未使用，此规则仅在启用该no-unused-vars规则时有效。

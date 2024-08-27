@@ -1,9 +1,9 @@
 <template>
 	<view class="content">
-		<image class="logo" src="/assets/logo.png" />
+		<image class="logo" src="@/assets/logo.png" />
 		<view class="text-area">
 			<text class="title" :text="title ? 'xl' : ''">{{ title }}</text>
-			<u-button type="primary" size="large" text="test" />
+			<u-button type="primary" size="large" text="test" v-auth="'add'" v-debounce="test" />
 		</view>
 	</view>
 </template>
@@ -11,6 +11,10 @@
 <script setup lang="ts">
 import { ref } from "vue";
 const title = ref("Hello");
+
+const test = () => {
+	console.log(1);
+};
 </script>
 
 <style>
