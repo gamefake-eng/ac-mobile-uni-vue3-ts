@@ -3,7 +3,7 @@
 		<image class="logo" src="@/assets/logo.png" />
 		<view class="text-area">
 			<text class="title" :text="title ? 'xl' : ''">{{ title }}</text>
-			<u-button type="primary" size="large" text="test" v-auth="'add'" v-debounce="test" />
+			<u-button type="primary" size="large" text="test" />
 		</view>
 	</view>
 </template>

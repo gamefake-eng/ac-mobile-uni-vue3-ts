@@ -12,29 +12,52 @@
 - 使用 Pinia 替代 Vuex， 集成 Pinia 持久化插件
 - 使用 axios-miniprogram 对 Axios 整个二次封装 （请求拦截、常用请求封装……）
 - 基于 uview-plus 作为 UI 组件库，集成常用组件、插件
-- 常用自定义指令开发（权限、节流、防抖）
+- 常用自定义指令开发（权限、节流、防抖） [🈲微信小程序不支持自定义指令，需要在小程序中使用时将其去除]
 - 使用 Prettier 统一格式化代码，集成 Eslint、csscomb 代码校验规范
 - 使用 husky、lint-staged、commitlint、commitizen、cz-git 规范提交信息
 
 ## 架构目录文件说明 📚
 
-- .husky git提交钩子
-- api 接口管理
-- assets 静态资源
-- components 公共组件
-- config 项目配置
-- hooks 自定义hooks
-- pages 页面
-- stores 状态管理
-- utils 工具类
-- types 全局类型定义
-- uni_modules uni市场插件
-- .csscomb.json css代码格式化配置
-- .eslintrc.js eslint配置
-- .prettierrc.js prettier配置
-- commitlint.config.js git提交规范配置
-- lint-staged.config.js lint-staged配置
-- unocss.config.ts unocss配置
+```text
+ac-mobile-uni-vue3-ts
+├─ .husky                 # husky 配置文件
+├─ .vscode                # VSCode 推荐配置
+├─ public                 # 静态资源文件（该文件夹不会被打包）
+├─ src
+│  ├─ api                 # API 接口管理
+│  ├─ assets              # 静态资源文件
+│  ├─ components          # 全局组件
+│  ├─ config              # 全局配置项
+│  ├─ directives          # 全局指令文件
+│  ├─ hooks               # 常用 Hooks 封装
+│  ├─ stores              # pinia store
+│  ├─ styles              # 全局样式文件
+│  ├─ typings             # 全局 ts 声明
+│  ├─ uni_modules         # uniapp 插件管理
+│  ├─ utils               # 常用工具库
+│  ├─ pages               # 项目所有页面
+│  ├─ App.vue             # 项目主组件
+│  ├─ env.d.ts            # 指定 ts 识别 vue
+│  └─ main.ts             # 项目入口文件
+├─ .env                   # vite 常用配置
+├─ .env.development       # 开发环境配置
+├─ .env.production        # 生产环境配置
+├─ .eslintignore          # 忽略 Eslint 校验
+├─ .eslintrc.js           # Eslint 校验配置文件
+├─ .gitignore             # 忽略 git 提交
+├─ .prettierignore        # 忽略 Prettier 格式化
+├─ .prettierrc.js         # Prettier 格式化配置
+├─ .csscomb.json          # csscomb 样式格式化配置
+├─ commitlint.config.js   # git 提交规范配置
+├─ index.html             # 入口 html
+├─ lint-staged.config     # lint-staged 配置文件
+├─ package-lock.json      # 依赖包包版本锁
+├─ package.json           # 依赖包管理
+├─ README.md              # README 介绍
+├─ tsconfig.json          # typescript 全局配置
+└─ unocss.config.ts       # unocss 配置文件
+└─ vite.config.ts         # vite 全局配置文件
+```
 
 ## 依赖
 
@@ -116,5 +139,4 @@ pnpm run commit
 	> ci: 🎡 修改 CI 配置、脚本
 	> revert: ⏪️ 回滚 commit
 	> chore: 🔨 对构建过程或辅助工具和库的更改（不影响源文件、测试用例）
-
 3. 命令行使用git cz进行提交 `pnpm run commit`

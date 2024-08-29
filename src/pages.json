@@ -16,7 +16,6 @@
 	"easycom": {
 		"autoscan": true,
 		"custom": {
-			"^up-(.*)": "uview-plus/components/up-$1/up-$1.vue",
 			"^u-(.*)": "uview-plus/components/u-$1/u-$1.vue"
 		}
 	}
