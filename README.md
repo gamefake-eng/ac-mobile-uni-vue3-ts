@@ -92,7 +92,9 @@ ac-mobile-uni-vue3-ts
 - Clone:
 
 ``` bash
-git clone https://xxxx.git
+git clone https://gitee.com/huangxianhhh/ac-mobile-uni-vue3-ts.git
+or
+git clone https://github.com/gamefake-eng/ac-mobile-uni-vue3-ts.git
 ```
 
 - Install：
