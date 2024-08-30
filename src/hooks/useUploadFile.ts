@@ -12,8 +12,6 @@ import TOOL from "@/utils/common";
 
 // toast
 import { toast } from "@/utils/rewriteUniFn";
-// plus
-import { storage } from "@/utils/plus";
 
 export type DirectFileTypes = {
 	url: string; // 接口地址
