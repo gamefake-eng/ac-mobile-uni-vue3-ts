@@ -30,8 +30,8 @@ http.interceptors.request.use(
 			[TOKEN_KEY]: `${TOKEN_BASE} ${token}`
 		};
 
-		// 请求方式为 get 加上接口重发
-		if (config.method === "get") {
+		// 请求方式为 get 加上接口重发 并且 retry次数大于0
+		if (config.method === "get" && config.retry) {
 			config.retry = 2;
 			config.retryDelay = 500;
 		}
