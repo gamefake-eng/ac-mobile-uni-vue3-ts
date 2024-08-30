@@ -1,7 +1,6 @@
 /* eslint-disable camelcase */
 import { reactive } from "vue";
 import { fileApi } from "@/api";
-
 // 操作文件上传
 import CryptoJS from "crypto-js";
 import mime from "mime";
